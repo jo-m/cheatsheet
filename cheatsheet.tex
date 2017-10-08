@@ -13,12 +13,12 @@
 
 % modifier key symbols
 \newcommand\Cmd{Cmd}
-\newcommand\Ctl{Ctrl}
-\newcommand\Opt{Alt}
-\newcommand\Sft{Shift}
+\newcommand\Ctrl{Ctrl}
+\newcommand\Alt{Alt}
+\newcommand\Shift{Shift}
 \newcommand\Tab{Tab}
-\newcommand\Bsp{Del}
-\newcommand\Ent{Enter}
+\newcommand\Del{Del}
+\newcommand\Enter{Enter}
 \newcommand\Up{Up}
 \newcommand\Down{Down}
 \newcommand\Left{Left}
@@ -69,33 +69,33 @@
 \begin{supertabular}{@{}p{5cm}r@{}}
     \theader{Common}
     \tshortcut{Hyphen (-, for compound terms)}{-}
-    \tshortcut{En Dash (–, for ranges)}{\Opt+-}
-    \tshortcut{Em Dash (—, replace commas)}{\Sft+\Opt+-}
+    \tshortcut{En Dash (–, for ranges)}{\Alt+-}
+    \tshortcut{Em Dash (—, replace commas)}{\Shift+\Alt+-}
 
     \theader{CLion}
 
     \theader{Sublime text}
-    \tshortcut{Toggle spell check}{\Opt+F6}
+    \tshortcut{Toggle spell check}{\Alt+F6}
     \tshortcut{Toggle side bar}{\Cmd+K, \Cmd+B}
-    \tshortcut{Paste from history}{\Cmd+\Opt+V}
+    \tshortcut{Paste from history}{\Cmd+\Alt+V}
     \tshortcut{Indent}{\Cmd+]}
     \tshortcut{Unindent}{\Cmd+[}
     \tsubheader{Navigation}
-    \tshortcut{Show command palette}{\Cmd+\Sft+P}
+    \tshortcut{Show command palette}{\Cmd+\Shift+P}
     \tshortcut{Goto files}{\Cmd+P}
     \tshortcut{Goto symbol}{\Cmd+R}
-    \tshortcut{Goto line}{\Ctl+G}
-    \tshortcut{Goto definition}{\Cmd+\Opt+\Down}
-    \tshortcut{Goto symbol in project}{\Cmd+\Sft+R}
-    \tshortcut{Jump back}{\Ctl+-}
-    \tshortcut{Jump forward}{\Ctl+\Sft+-}
+    \tshortcut{Goto line}{\Ctrl+G}
+    \tshortcut{Goto definition}{\Cmd+\Alt+\Down}
+    \tshortcut{Goto symbol in project}{\Cmd+\Shift+R}
+    \tshortcut{Jump back}{\Ctrl+-}
+    \tshortcut{Jump forward}{\Ctrl+\Shift+-}
     \tsubheader{Search}
     \tshortcut{Find}{\Cmd+F}
     \tshortcut{Find next}{\Cmd+G}
-    \tshortcut{Find previous}{\Cmd+\Sft+G}
-    \tshortcut{Replace}{\Cmd+\Opt+F}
-    \tshortcut{Replace next}{\Cmd+\Opt+E}
-    \tshortcut{Find in files}{\Cmd+\Sft+F}
+    \tshortcut{Find previous}{\Cmd+\Shift+G}
+    \tshortcut{Replace}{\Cmd+\Alt+F}
+    \tshortcut{Replace next}{\Cmd+\Alt+E}
+    \tshortcut{Find in files}{\Cmd+\Shift+F}
 
 
     \theader{BetterTouchTool}
@@ -130,7 +130,7 @@
     \tshortcut{Search forward}{/}
 
     \theader{Tmux}
-    \tshortcut{\Prf}{\Ctl+B}
+    \tshortcut{\Prf}{\Ctrl+B}
     \tsubheader{Windows}
     \tshortcut{Next window}{\Prf+N}
     \tshortcut{Previous window}{\Prf+P}
@@ -145,7 +145,7 @@
     \tshortcut{Start Copy mode}{\Prf+[}
     \tshortcut{Start selection}{Space}
     \tshortcut{Clear selection}{\Esc}
-    \tshortcut{Copy selection}{\Ent}
+    \tshortcut{Copy selection}{\Enter}
     \tshortcut{Paste buffer}{\Prf+]}
     \tshortcut{Cursor to bottom line}{L}
     \tshortcut{Cursor to middle line}{M}

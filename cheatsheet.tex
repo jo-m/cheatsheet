@@ -34,6 +34,11 @@
     \noalign{\global\arrayrulewidth=1.5pt}
     \hline
 }
+\newcommand{\theaderfirst}[1]{
+    \textbf{\uppercase{#1}} & \\
+    \noalign{\global\arrayrulewidth=1.5pt}
+    \hline
+}
 \newcommand{\tsubheader}[1]{
     \rule{0pt}{1ex} \\
     \textbf{#1} & \\
@@ -52,27 +57,29 @@
 }
 
 % modifier key symbols
-\newcommand\Cmd{Cmd}
-\newcommand\Ctrl{Ctrl}
-\newcommand\Alt{Alt}
-\newcommand\Shift{Shift}
-\newcommand\Tab{Tab}
-\newcommand\Del{Del}
-\newcommand\Enter{Enter}
-\newcommand\Up{Up}
-\newcommand\Down{Down}
-\newcommand\Left{Left}
-\newcommand\Right{Right}
-\newcommand\Fn{{\xits ⎋}}
+\usepackage{fontspec}
+\newfontfamily\segoe{seguisym.ttf}
+\newfontfamily\lucida{Lucida-Grande.otf}
+\newcommand\Cmd{{\segoe ⌘}}
+\newcommand\Ctrl{{\segoe \textasciicircum}}
+\newcommand\Alt{{\segoe ⌥}}
+\newcommand\Shift{{\lucida ⇧}}
+\newcommand\Del{{\lucida ⌫}}
+\newcommand\Enter{{\segoe ↩︎}}
+\newcommand\Up{{\segoe ↑}}
+\newcommand\Down{{\segoe ↓}}
+\newcommand\Left{{\segoe ←}}
+\newcommand\Right{{\segoe →}}
+\newcommand\Fn{Fn}
 \newcommand\Prf{Prefix}
-\newcommand\Esc{ESC}
+\newcommand\Esc{Esc}
 
 \begin{document}
 \begin{multicols}{3}
 
 \TrickSupertabularIntoMulticols
 \begin{supertabular}{@{}p{5cm}r@{}}
-    \theader{Common}
+    \theaderfirst{Common}
     \tshortcut{Unicode Chars/Emojis}{\Ctrl+\Cmd+Space}
     \tshortcut{Screenshot}{\Cmd+\Shift+3}
     \tshortcut{Screenshot (select)}{\Cmd+\Shift+4}

@@ -11,22 +11,7 @@
 \setlength{\columnsep}{1cm}
 \setlength{\columnseprule}{0pt}
 
-% modifier key symbols
-\newcommand\Cmd{Cmd}
-\newcommand\Ctrl{Ctrl}
-\newcommand\Alt{Alt}
-\newcommand\Shift{Shift}
-\newcommand\Tab{Tab}
-\newcommand\Del{Del}
-\newcommand\Enter{Enter}
-\newcommand\Up{Up}
-\newcommand\Down{Down}
-\newcommand\Left{Left}
-\newcommand\Right{Right}
-\newcommand\Fn{{\xits ⎋}}
-\newcommand\Prf{Prefix}
-\newcommand\Esc{ESC}
-
+% multicolumn table setup
 \usepackage{supertabular}
 \makeatletter
 \let\mcnewpage=\newpage
@@ -42,31 +27,45 @@
 }
 \makeatother
 
+% macros for symbols and headers
 \newcommand{\theader}[1]{
     \rule{0pt}{6ex} \\
     \textbf{\uppercase{#1}} & \\
     \noalign{\global\arrayrulewidth=1.5pt}
     \hline
 }
-
 \newcommand{\tsubheader}[1]{
     \rule{0pt}{1ex} \\
     \textbf{#1} & \\
     \noalign{\global\arrayrulewidth=0.5pt}
     \hline
 }
-
 \newcommand{\tshortcut}[2]{
     #1 & \textbf{#2} \\
     \noalign{\global\arrayrulewidth=0.5pt}
     \hline
 }
-
 \newcommand{\tshortcutm}[3]{
     #1 & \textbf{#2} / \textbf{#3} \\
     \noalign{\global\arrayrulewidth=0.5pt}
     \hline
 }
+
+% modifier key symbols
+\newcommand\Cmd{Cmd}
+\newcommand\Ctrl{Ctrl}
+\newcommand\Alt{Alt}
+\newcommand\Shift{Shift}
+\newcommand\Tab{Tab}
+\newcommand\Del{Del}
+\newcommand\Enter{Enter}
+\newcommand\Up{Up}
+\newcommand\Down{Down}
+\newcommand\Left{Left}
+\newcommand\Right{Right}
+\newcommand\Fn{{\xits ⎋}}
+\newcommand\Prf{Prefix}
+\newcommand\Esc{ESC}
 
 \begin{document}
 \begin{multicols}{3}

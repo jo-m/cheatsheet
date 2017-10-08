@@ -62,17 +62,33 @@
     \hline
 }
 
+\newcommand{\tshortcutm}[3]{
+    #1 & \textbf{#2} / \textbf{#3} \\
+    \noalign{\global\arrayrulewidth=0.5pt}
+    \hline
+}
+
 \begin{document}
 \begin{multicols}{3}
 
 \TrickSupertabularIntoMulticols
 \begin{supertabular}{@{}p{5cm}r@{}}
     \theader{Common}
+    \tshortcut{Unicode Chars/Emojis}{\Ctrl+\Cmd+Space}
+    \tshortcut{Screenshot}{\Cmd+\Shift+3}
+    \tshortcut{Screenshot (select)}{\Cmd+\Shift+4}
     \tshortcut{Hyphen (-, for compound terms)}{-}
     \tshortcut{En Dash (–, for ranges)}{\Alt+-}
     \tshortcut{Em Dash (—, replace commas)}{\Shift+\Alt+-}
 
     \theader{CLion}
+    \tshortcut{Find Action}{\Ctrl+\Shift+A}
+    \tshortcutm{Run/Debug}{\Ctrl+R}{\Ctrl+D}
+
+    \tsubheader{Editing}
+    \tshortcut{Insert live template}{\Cmd+J}
+    \tsubheader{Navigation}
+    \tsubheader{Refactoring}
 
     \theader{Sublime text}
     \tshortcut{Toggle spell check}{\Alt+F6}
@@ -97,8 +113,15 @@
     \tshortcut{Replace next}{\Cmd+\Alt+E}
     \tshortcut{Find in files}{\Cmd+\Shift+F}
 
-
     \theader{BetterTouchTool}
+    \tshortcut{Open tmux tab here (finder)}{F5}
+    \tshortcut{Open Telegram}{F3}
+    \tshortcut{Open WhatsApp}{F4}
+    \tshortcut{Open Safari}{F11}
+    \tshortcut{Open Preview}{\Cmd+F3}
+    \tshortcut{Open Sourcetree}{\Cmd+F4}
+    \tshortcut{Open MS Word}{\Cmd+F10}
+    \tshortcut{Open CLion}{\Cmd+F12}
 
     \theader{Vim}
     \tsubheader{Navigation}

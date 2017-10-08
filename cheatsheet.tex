@@ -3,10 +3,6 @@
 \usepackage{xltxtra}
 \setsansfont{Brandon Grotesque Regular.ttf}[
     BoldFont = Brandon Grotesque Bold.ttf]
-% \setsansfont{segoeui.ttf}[
-%     BoldFont = segoeuib.ttf,
-%     ItalicFont = segoeuii.ttf,
-%     BoldItalicFont = segoeuiz.ttf]
 \renewcommand{\familydefault}{\sfdefault}
 
 % geometry setup
@@ -16,20 +12,20 @@
 \setlength{\columnseprule}{0pt}
 
 % modifier key symbols
-\usepackage{fontspec}
-\newfontfamily\xits{xits-regular.otf}
-\newcommand\Cmd{{\xits ⌘}}
-\newcommand\Ctl{^}
-\newcommand\Opt{{\xits ⌥}}
-\newcommand\Sft{{\xits ⇧}}
-\newcommand\Tab{{\xits ⇥}}
-\newcommand\Bsp{{\xits ⌫}}
-\newcommand\Ent{{\xits ↵}}
-% \newcommand\Up{{\xits }}
-% \newcommand\Down{{\xits }}
-% \newcommand\Left{{\xits }}
-% \newcommand\Right{{\xits }}
+\newcommand\Cmd{Cmd}
+\newcommand\Ctl{Ctrl}
+\newcommand\Opt{Alt}
+\newcommand\Sft{Shift}
+\newcommand\Tab{Tab}
+\newcommand\Bsp{Del}
+\newcommand\Ent{Enter}
+\newcommand\Up{Up}
+\newcommand\Down{Down}
+\newcommand\Left{Left}
+\newcommand\Right{Right}
 \newcommand\Fn{{\xits ⎋}}
+\newcommand\Prf{Prefix}
+\newcommand\Esc{ESC}
 
 \usepackage{supertabular}
 \makeatletter
@@ -53,6 +49,12 @@
     \hline
 }
 
+\newcommand{\tsubheader}[1]{
+    \textbf{#1} & \\
+    \noalign{\global\arrayrulewidth=0.5pt}
+    \hline
+}
+
 \newcommand{\tshortcut}[2]{
     #1 & \textbf{#2} \\
     \noalign{\global\arrayrulewidth=0.5pt}
@@ -60,21 +62,41 @@
 }
 
 \begin{document}
-\section*{Cheatsheet}
 \begin{multicols}{3}
 
 \TrickSupertabularIntoMulticols
 \begin{supertabular}{@{}p{5cm}r@{}}
     \theader{CLion}
-    \tshortcut{Close tab}{\Cmd+W}
     \theader{Vim}
-    % \tshortcut{Go to end of line}{\Ctl+X}
-    \tshortcut{Go to end of line}{\Opt+C}
-    % \tshortcut{Go to end of line}{\Sft+U}
-    % \tshortcut{Go to end of line}{\Tab+T}
-    % \tshortcut{Go to end of line}{\Bsp+R}
-    % \tshortcut{Go to end of line}{\Ent+R}
-% \tablebody
+    \theader{Sublime text}
+    \theader{SourceTree}
+
+    \theader{Tmux}
+    \tshortcut{\Prf}{\Ctl+B}
+    \tsubheader{Windows}
+    \tshortcut{next window}{\Prf+N}
+    \tshortcut{previous window}{\Prf+P}
+    \tshortcut{find window}{\Prf+F}
+    \tshortcut{name window}{\Prf+,}
+    \tshortcut{kill window}{\Prf+\&}
+    \tsubheader{Panes}
+    \tshortcut{swap panes}{\Prf+O}
+    \tshortcut{show pane numbers}{\Prf+Q}
+    \tshortcut{kill pane}{\Prf+X}
+    \tsubheader{Copy Mode}
+    \tshortcut{Start Copy mode}{\Prf+[}
+    \tshortcut{Start selection}{Space}
+    \tshortcut{Clear selection}{\Esc}
+    \tshortcut{Copy selection}{\Ent}
+    \tshortcut{Paste buffer}{\Prf+]}
+    \tshortcut{Cursor to bottom line}{L}
+    \tshortcut{Cursor to middle line}{M}
+    \tshortcut{Cursor to top line}{H}
+    \tshortcut{Goto line}{:}
+    \tshortcut{Quit mode}{q}
+    \tshortcut{Search again}{n}
+    \tshortcut{Search backward}{?}
+    \tshortcut{Search forward}{/}
 \end{supertabular}
 
 \end{multicols}

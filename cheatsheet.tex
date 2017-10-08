@@ -1,0 +1,71 @@
+\documentclass[9pt,a4paper,landscape,draft,sans]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[margin=2cm]{geometry}
+% \usepackage[top=1cm, bottom=1.25cm, left=1.25cm, right=1.25cm]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{0pt}
+
+% list fonts: updmap-sys --listmaps
+% \usepackage{fontspec}
+% \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+% \setmainfont{Kramer}
+
+\usepackage{supertabular}
+\makeatletter
+\let\mcnewpage=\newpage
+\newcommand{\TrickSupertabularIntoMulticols}{%
+  \renewcommand\newpage{%
+    \if@firstcolumn
+      \hrule width\linewidth height0pt
+      \columnbreak
+    \else
+      \mcnewpage
+    \fi
+  }%
+}
+\makeatother
+
+\newcommand{\theader}[1]{
+    \rule{0pt}{6ex} \\
+    \textbf{\uppercase{#1}} & \\
+    \noalign{\global\arrayrulewidth=1.5pt}
+    \hline
+}
+
+\newcommand{\tshortcut}[2]{
+    #1 & \textbf{#2} \\
+    \noalign{\global\arrayrulewidth=0.5pt}
+    \hline
+}
+
+\newcommand{\Cmd}[0]{Cmd}
+\newcommand{\Ctrl}[0]{Ctrl}
+\newcommand{\Alt}[0]{Alt}
+\newcommand{\Shift}[0]{Shift}
+\newcommand{\Tab}[0]{Tab}
+\newcommand{\Backspace}[0]{Backspace}
+\newcommand{\Enter}[0]{Enter}
+\newcommand{\Up}[0]{Up}
+\newcommand{\Down}[0]{Down}
+
+
+\begin{document}
+\section*{Cheatsheet}
+\begin{multicols}{3}
+
+
+\TrickSupertabularIntoMulticols
+\begin{supertabular}{@{}p{5cm}r@{}}
+    \theader{CLion}
+    \tshortcut{Close tab}{Cmd+W}
+    \theader{Vim}
+    \tshortcut{Go to end of line                          }{\$}
+% \tablebody
+\end{supertabular}
+
+\end{multicols}
+\end{document}

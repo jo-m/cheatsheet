@@ -1,31 +1,48 @@
 \documentclass[9pt,a4paper,landscape,draft,sans]{scrartcl}
 
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage{xltxtra}
+\setsansfont{Brandon Grotesque Regular.ttf}[
+    BoldFont = Brandon Grotesque Bold.ttf]
+% \setsansfont{segoeui.ttf}[
+%     BoldFont = segoeuib.ttf,
+%     ItalicFont = segoeuii.ttf,
+%     BoldItalicFont = segoeuiz.ttf]
+\renewcommand{\familydefault}{\sfdefault}
 
+% geometry setup
 \usepackage[margin=2cm]{geometry}
-% \usepackage[top=1cm, bottom=1.25cm, left=1.25cm, right=1.25cm]{geometry}
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
 \setlength{\columnseprule}{0pt}
 
-% list fonts: updmap-sys --listmaps
-% \usepackage{fontspec}
-% \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-% \setmainfont{Kramer}
+% modifier key symbols
+\usepackage{fontspec}
+\newfontfamily\xits{xits-regular.otf}
+\newcommand\Cmd{{\xits ⌘}}
+\newcommand\Ctl{^}
+\newcommand\Opt{{\xits ⌥}}
+\newcommand\Sft{{\xits ⇧}}
+\newcommand\Tab{{\xits ⇥}}
+\newcommand\Bsp{{\xits ⌫}}
+\newcommand\Ent{{\xits ↵}}
+% \newcommand\Up{{\xits }}
+% \newcommand\Down{{\xits }}
+% \newcommand\Left{{\xits }}
+% \newcommand\Right{{\xits }}
+\newcommand\Fn{{\xits ⎋}}
 
 \usepackage{supertabular}
 \makeatletter
 \let\mcnewpage=\newpage
-\newcommand{\TrickSupertabularIntoMulticols}{%
-  \renewcommand\newpage{%
+\newcommand{\TrickSupertabularIntoMulticols}{
+  \renewcommand\newpage{
     \if@firstcolumn
       \hrule width\linewidth height0pt
       \columnbreak
     \else
       \mcnewpage
     \fi
-  }%
+  }
 }
 \makeatother
 
@@ -42,28 +59,21 @@
     \hline
 }
 
-\newcommand{\Cmd}[0]{Cmd}
-\newcommand{\Ctrl}[0]{Ctrl}
-\newcommand{\Alt}[0]{Alt}
-\newcommand{\Shift}[0]{Shift}
-\newcommand{\Tab}[0]{Tab}
-\newcommand{\Backspace}[0]{Backspace}
-\newcommand{\Enter}[0]{Enter}
-\newcommand{\Up}[0]{Up}
-\newcommand{\Down}[0]{Down}
-
-
 \begin{document}
 \section*{Cheatsheet}
 \begin{multicols}{3}
 
-
 \TrickSupertabularIntoMulticols
 \begin{supertabular}{@{}p{5cm}r@{}}
     \theader{CLion}
-    \tshortcut{Close tab}{Cmd+W}
+    \tshortcut{Close tab}{\Cmd+W}
     \theader{Vim}
-    \tshortcut{Go to end of line                          }{\$}
+    % \tshortcut{Go to end of line}{\Ctl+X}
+    \tshortcut{Go to end of line}{\Opt+C}
+    % \tshortcut{Go to end of line}{\Sft+U}
+    % \tshortcut{Go to end of line}{\Tab+T}
+    % \tshortcut{Go to end of line}{\Bsp+R}
+    % \tshortcut{Go to end of line}{\Ent+R}
 % \tablebody
 \end{supertabular}
 

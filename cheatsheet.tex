@@ -99,9 +99,9 @@
 \TrickSupertabularIntoMulticols
 \begin{supertabular}{@{}p{4.8cm}p{2.5cm}@{}}
     \theaderfirst{Common}
-    \tshortcut{Unicode chars \slash Emojis}{\Ctrl\+\Cmd\+\Space}
-    \tshortcut{Screenshot}{\Cmd\+\Shift\+3}
-    \tshortcut{Screenshot (select)}{\Cmd\+\Shift\+4}
+    % \tshortcut{Unicode chars \slash Emojis}{\Ctrl\+\Cmd\+\Space}
+    % \tshortcut{Screenshot}{\Cmd\+\Shift\+3}
+    % \tshortcut{Screenshot (select)}{\Cmd\+\Shift\+4}
     \tshortcut{Hyphen (-, for compound terms)}{-}
     \tshortcut{En Dash (–, for ranges)}{\Alt\+-}
     \tshortcut{Em Dash (—, replace commas)}{\Shift\+\Alt\+-}
@@ -110,7 +110,7 @@
     \theader{CLion}
     \tshortcut{Panel switcher}{\Ctrl\+\Tab}
     \tshortcut{Find action}{\Ctrl\+\Shift\+A}
-    \tshortcutm{Run \slash Debug}{\Ctrl\+R}{\Ctrl\+D}
+    % \tshortcutm{Run \slash Debug}{\Ctrl\+R}{\Ctrl\+D}
     \tshortcutm{Find \slash Replace}{\Cmd\+F}{\Cmd\+R}
     \tshortcutm{Find next \slash previous}{\Cmd\+G}{\Cmd\+\Shift\+G}
     \tshortcut{Search everywhere}{Double \Shift}
@@ -143,30 +143,28 @@
     \tshortcut{Toggle spell check}{\Alt\+F6}
     \tshortcut{Toggle side bar}{\Cmd\+K, \Cmd\+B}
     \tshortcut{Paste from history}{\Cmd\+\Alt\+V}
-    \tshortcut{Indent}{\Cmd\+]}
-    \tshortcut{Unindent}{\Cmd\+[}
+    % \tshortcut{Indent}{\Cmd\+]}
+    % \tshortcut{Unindent}{\Cmd\+[}
     \tsubheader{Navigation}
-    \tshortcut{Show command palette}{\Cmd\+\Shift\+P}
-    \tshortcut{Goto files}{\Cmd\+P}
+    % \tshortcut{Show command palette}{\Cmd\+\Shift\+P}
+    % \tshortcut{Goto files}{\Cmd\+P}
     \tshortcut{Goto symbol}{\Cmd\+R}
     \tshortcut{Goto line}{\Ctrl\+G}
     \tshortcut{Goto definition}{\Cmd\+\Alt\+\Down}
     \tshortcut{Goto symbol in project}{\Cmd\+\Shift\+R}
-    \tshortcut{Jump back}{\Ctrl\+-}
-    \tshortcut{Jump forward}{\Ctrl\+\Shift\+-}
+    \tshortcutm{Jump back \slash forward}{\Ctrl\+-}{\Ctrl\+\Shift\+-}
     \tsubheader{Search}
-    \tshortcut{Find}{\Cmd\+F}
-    \tshortcut{Find next}{\Cmd\+G}
-    \tshortcut{Find previous}{\Cmd\+\Shift\+G}
+    % \tshortcut{Find}{\Cmd\+F}
+    \tshortcutm{Find next \slash previous}{\Cmd\+G}{\Cmd\+\Shift\+G}
     \tshortcut{Replace}{\Cmd\+\Alt\+F}
     \tshortcut{Replace next}{\Cmd\+\Alt\+E}
     \tshortcut{Find in files}{\Cmd\+\Shift\+F}
 
     \theader{BetterTouchTool}
-    \tshortcut{Open tmux tab here (finder)}{F5}
+    % \tshortcut{Open tmux tab here (finder)}{F5}
     \tshortcut{Open Telegram}{F3}
     \tshortcut{Open WhatsApp}{F4}
-    \tshortcut{Open Safari}{F11}
+    % \tshortcut{Open Safari}{F11}
     \tshortcut{Open Preview}{\Cmd\+F3}
     \tshortcut{Open Sourcetree}{\Cmd\+F4}
     \tshortcut{Open MS Word}{\Cmd\+F10}
@@ -174,7 +172,7 @@
 
     \theader{Vim}
     \tsubheader{Navigation}
-    \tshortcut{Move cursor}{hjkl}
+    % \tshortcut{Move cursor}{hjkl}
     \tshortcut{Back to indentation}{\textasciicircum}
     \tshortcut{Cursor to bottom line}{L}
     \tshortcut{Cursor to middle line}{M}
@@ -185,21 +183,21 @@
     \tshortcut{End of word (no punctuation)}{E}
     \tshortcut{Jump back word}{b}
     \tshortcut{Jump back word (no punctuation)}{B}
-    \tshortcut{Start of line}{0}
+    % \tshortcut{Start of line}{0}
     \tshortcut{First non-blank character of line}{\textasciicircum}
-    \tshortcut{End of line}{\$}
+    % \tshortcut{End of line}{\$}
     \tshortcut{Go to command (with number)}{G}
     \tsubheader{Actions}
-    \tshortcut{Insert at cursor}{i}
-    \tshortcut{Insert after cursor}{a}
+    % \tshortcut{Insert at cursor}{i}
+    % \tshortcut{Insert after cursor}{a}
     \tshortcut{Insert at beginning of line}{I}
     \tshortcut{Insert at end of line}{A}
     \tshortcut{Insert blank line after current line}{o}
     \tshortcut{Insert blank line before current line}{O}
-    \tshortcut{Delete entire line}{dd}
+    % \tshortcut{Delete entire line}{dd}
     \tshortcut{Delete to end of line}{D}
     \tshortcut{Search again}{n}
-    \tshortcut{Search forward}{/}
+    % \tshortcut{Search forward}{/}
 
     \theader{Tmux}
     \tshortcut{\Prf}{\Ctrl\+B}
@@ -209,12 +207,12 @@
     \tshortcut{Find window}{\Prf\+F}
     \tshortcut{Name window}{\Prf\+,}
     \tshortcut{Kill window}{\Prf\+\&}
-    \tsubheader{Panes}
-    \tshortcut{Swap panes}{\Prf\+O}
-    \tshortcut{Show pane numbers}{\Prf\+Q}
-    \tshortcut{Kill pane}{\Prf\+X}
+    % \tsubheader{Panes}
+    % \tshortcut{Swap panes}{\Prf\+O}
+    % \tshortcut{Show pane numbers}{\Prf\+Q}
+    % \tshortcut{Kill pane}{\Prf\+X}
     \tsubheader{Copy Mode}
-    \tshortcut{Start Copy mode}{\Prf\+[}
+    % \tshortcut{Start Copy mode}{\Prf\+[}
     \tshortcut{Start selection}{\Space}
     \tshortcut{Clear selection}{\Esc}
     \tshortcut{Copy selection}{\Enter}
@@ -223,7 +221,7 @@
     \tshortcut{Cursor to middle line}{M}
     \tshortcut{Cursor to top line}{H}
     \tshortcut{Goto line}{:}
-    \tshortcut{Quit mode}{q}
+    % \tshortcut{Quit mode}{q}
     \tshortcut{Search again}{n}
     \tshortcut{Search backward}{?}
     \tshortcut{Search forward}{/}

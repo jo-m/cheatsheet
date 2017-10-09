@@ -27,6 +27,8 @@
 }
 \makeatother
 
+\renewcommand{\slash}{\hspace{1pt}/\hspace{2pt}}
+
 % macros for symbols and headers
 \newcommand{\theader}[1]{
     \rule{0pt}{15pt} \\
@@ -74,6 +76,7 @@
 \newcommand\Fn{Fn}
 \newcommand\Prf{Prefix}
 \newcommand\Esc{Esc}
+\newcommand\Space{Space}
 \newcommand\+{}
 
 \begin{document}
@@ -82,7 +85,7 @@
 \TrickSupertabularIntoMulticols
 \begin{supertabular}{@{}p{5cm}r@{}}
     \theaderfirst{Common}
-    \tshortcut{Unicode Chars/Emojis}{\Ctrl\+\Cmd\+Space}
+    \tshortcut{Unicode chars \slash Emojis}{\Ctrl\+\Cmd\+\Space}
     \tshortcut{Screenshot}{\Cmd\+\Shift\+3}
     \tshortcut{Screenshot (select)}{\Cmd\+\Shift\+4}
     \tshortcut{Hyphen (-, for compound terms)}{-}
@@ -93,34 +96,34 @@
     \theader{CLion}
     \tshortcut{Panel switcher}{\Ctrl\+\Tab}
     \tshortcut{Find action}{\Ctrl\+\Shift\+A}
-    \tshortcutm{Run/Debug}{\Ctrl\+R}{\Ctrl\+D}
-    \tshortcutm{Find/Replace}{\Cmd\+F}{\Cmd\+R}
-    \tshortcutm{Find next/previous}{\Cmd\+G}{\Cmd\+\Shift\+G}
+    \tshortcutm{Run \slash Debug}{\Ctrl\+R}{\Ctrl\+D}
+    \tshortcutm{Find \slash Replace}{\Cmd\+F}{\Cmd\+R}
+    \tshortcutm{Find next \slash previous}{\Cmd\+G}{\Cmd\+\Shift\+G}
     \tshortcut{Search everywhere}{Double \Shift}
 
     \tsubheader{Editing}
-    \tshortcut{Basic code completion}{\Ctrl\+Space}
-    \tshortcut{Smart code completion}{\Ctrl\+\Shift\+Space}
+    \tshortcut{Basic code completion}{\Ctrl\+\Space}
+    \tshortcut{Smart code completion}{\Ctrl\+\Shift\+\Space}
     \tshortcut{Complete statement}{\Shift\+\Cmd\+\Enter}
     \tshortcut{Show parameters info}{\Cmd\+P}
     \tshortcut{Documentation lookup}{\Ctrl\+J}
     \tshortcut{Generate code}{\Cmd\+N}
     \tshortcut{Insert live template}{\Cmd\+J}
-    \tshortcutm{Override/implement methods}{\Ctrl\+O}{\Ctrl\+I}
+    \tshortcutm{Override \slash implement methods}{\Ctrl\+O}{\Ctrl\+I}
     \tshortcut{Optimize imports}{\Ctrl\+\Alt\+O}
     \tshortcut{Refactor this}{\Ctrl\+T}
 
     \tsubheader{Navigation}
-    \tshortcutm{Go to class/file}{\Cmd\+O}{\Cmd\+\Shift\+O}
+    \tshortcutm{Go to class \slash file}{\Cmd\+O}{\Cmd\+\Shift\+O}
     \tshortcut{Go to symbol}{\Alt\+\Cmd\+O}
     \tshortcut{Go to line}{\Cmd\+L}
     \tshortcut{Show recent files}{\Cmd\+E}
-    \tshortcutm{Navigate back/forward}{\Cmd\+]}{\Cmd\+[}
+    \tshortcutm{Navigate back \slash forward}{\Cmd\+]}{\Cmd\+[}
     \tshortcut{Go to last edit}{\Cmd\+\Shift\+\Del}
     \tshortcut{Go to related symbol}{\Cmd\+\Ctrl\+\Up}
     \tshortcut{Go to declaration}{\Cmd\+B}
     \tshortcut{Go to definition}{\Cmd\+\Alt\+B}
-    \tshortcutm{go to previous/next function}{\Ctrl\+\Up}{\Ctrl\+\Down}
+    \tshortcutm{go to previous \slash next function}{\Ctrl\+\Up}{\Ctrl\+\Down}
 
     \theader{Sublime text}
     \tshortcut{Toggle spell check}{\Alt\+F6}
@@ -198,7 +201,7 @@
     \tshortcut{Kill pane}{\Prf\+X}
     \tsubheader{Copy Mode}
     \tshortcut{Start Copy mode}{\Prf\+[}
-    \tshortcut{Start selection}{Space}
+    \tshortcut{Start selection}{\Space}
     \tshortcut{Clear selection}{\Esc}
     \tshortcut{Copy selection}{\Enter}
     \tshortcut{Paste buffer}{\Prf\+]}

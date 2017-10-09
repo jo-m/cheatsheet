@@ -6,10 +6,17 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 % geometry setup
-\usepackage[margin=1.7cm]{geometry}
+\usepackage[margin=1.7cm,footskip=25pt]{geometry}
 \usepackage{multicol}
 \setlength{\columnsep}{0.1cm}
 \setlength{\columnseprule}{0pt}
+
+% header/footer
+\usepackage[draft=false]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\ofoot{}
+\cfoot{}
+\ifoot{}
 
 % multicolumn table setup
 \usepackage{supertabular}

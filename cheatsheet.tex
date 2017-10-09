@@ -61,12 +61,12 @@
     \noalign{\global\arrayrulewidth=0.5pt}
     \hline
 }
-\newcommand{\tshortcut}[2]{
+\newcommand{\tshortcutI}[2]{
     #1 & \textbf{#2} \\
     \noalign{\global\arrayrulewidth=0.5pt}
     \hline
 }
-\newcommand{\tshortcutm}[3]{
+\newcommand{\tshortcutII}[3]{
     #1 & \textbf{#2} / \textbf{#3} \\
     \noalign{\global\arrayrulewidth=0.5pt}
     \hline
@@ -99,132 +99,132 @@
 \TrickSupertabularIntoMulticols
 \begin{supertabular}{@{}p{4.8cm}p{2.5cm}@{}}
     \theaderfirst{Common}
-    % \tshortcut{Unicode chars \slash Emojis}{\Ctrl\+\Cmd\+\Space}
-    % \tshortcut{Screenshot}{\Cmd\+\Shift\+3}
-    % \tshortcut{Screenshot (select)}{\Cmd\+\Shift\+4}
-    \tshortcut{Hyphen (-, for compound terms)}{-}
-    \tshortcut{En Dash (–, for ranges)}{\Alt\+-}
-    \tshortcut{Em Dash (—, replace commas)}{\Shift\+\Alt\+-}
-    \tshortcut{Degree symbol °}{\Alt\Shift 8}
+    % \tshortcutI{Unicode chars \slash Emojis}{\Ctrl\+\Cmd\+\Space}
+    % \tshortcutI{Screenshot}{\Cmd\+\Shift\+3}
+    % \tshortcutI{Screenshot (select)}{\Cmd\+\Shift\+4}
+    \tshortcutI{Hyphen (-, for compound terms)}{-}
+    \tshortcutI{En Dash (–, for ranges)}{\Alt\+-}
+    \tshortcutI{Em Dash (—, replace commas)}{\Shift\+\Alt\+-}
+    \tshortcutI{Degree symbol °}{\Alt\Shift 8}
 
     \theader{CLion}
-    \tshortcut{Panel switcher}{\Ctrl\+\Tab}
-    \tshortcut{Find action}{\Ctrl\+\Shift\+A}
-    % \tshortcutm{Run \slash Debug}{\Ctrl\+R}{\Ctrl\+D}
-    \tshortcutm{Find \slash Replace}{\Cmd\+F}{\Cmd\+R}
-    \tshortcutm{Find next \slash previous}{\Cmd\+G}{\Cmd\+\Shift\+G}
-    \tshortcut{Search everywhere}{Double \Shift}
+    \tshortcutI{Panel switcher}{\Ctrl\+\Tab}
+    \tshortcutI{Find action}{\Ctrl\+\Shift\+A}
+    % \tshortcutII{Run \slash Debug}{\Ctrl\+R}{\Ctrl\+D}
+    \tshortcutII{Find \slash Replace}{\Cmd\+F}{\Cmd\+R}
+    \tshortcutII{Find next \slash previous}{\Cmd\+G}{\Cmd\+\Shift\+G}
+    \tshortcutI{Search everywhere}{Double \Shift}
 
     \tsubheader{Editing}
-    \tshortcut{Basic code completion}{\Ctrl\+\Space}
-    \tshortcut{Smart code completion}{\Ctrl\+\Shift\+\Space}
-    \tshortcut{Complete statement}{\Shift\+\Cmd\+\Enter}
-    \tshortcut{Show parameters info}{\Cmd\+P}
-    \tshortcut{Documentation lookup}{\Ctrl\+J}
-    \tshortcut{Generate code}{\Cmd\+N}
-    \tshortcut{Insert live template}{\Cmd\+J}
-    \tshortcutm{Override \slash implement methods}{\Ctrl\+O}{\Ctrl\+I}
-    \tshortcut{Optimize imports}{\Ctrl\+\Alt\+O}
-    \tshortcut{Refactor this}{\Ctrl\+T}
+    \tshortcutI{Basic code completion}{\Ctrl\+\Space}
+    \tshortcutI{Smart code completion}{\Ctrl\+\Shift\+\Space}
+    \tshortcutI{Complete statement}{\Shift\+\Cmd\+\Enter}
+    \tshortcutI{Show parameters info}{\Cmd\+P}
+    \tshortcutI{Documentation lookup}{\Ctrl\+J}
+    \tshortcutI{Generate code}{\Cmd\+N}
+    \tshortcutI{Insert live template}{\Cmd\+J}
+    \tshortcutII{Override \slash implement methods}{\Ctrl\+O}{\Ctrl\+I}
+    \tshortcutI{Optimize imports}{\Ctrl\+\Alt\+O}
+    \tshortcutI{Refactor this}{\Ctrl\+T}
 
     \tsubheader{Navigation}
-    \tshortcutm{Go to class \slash file}{\Cmd\+O}{\Cmd\+\Shift\+O}
-    \tshortcut{Go to symbol}{\Alt\+\Cmd\+O}
-    \tshortcut{Go to line}{\Cmd\+L}
-    \tshortcut{Show recent files}{\Cmd\+E}
-    \tshortcutm{Navigate back \slash forward}{\Cmd\+]}{\Cmd\+[}
-    \tshortcut{Go to last edit}{\Cmd\+\Shift\+\Del}
-    \tshortcut{Go to related symbol}{\Cmd\+\Ctrl\+\Up}
-    \tshortcut{Go to declaration}{\Cmd\+B}
-    \tshortcut{Go to definition}{\Cmd\+\Alt\+B}
-    \tshortcutm{go to previous \slash next function}{\Ctrl\+\Up}{\Ctrl\+\Down}
+    \tshortcutII{Go to class \slash file}{\Cmd\+O}{\Cmd\+\Shift\+O}
+    \tshortcutI{Go to symbol}{\Alt\+\Cmd\+O}
+    \tshortcutI{Go to line}{\Cmd\+L}
+    \tshortcutI{Show recent files}{\Cmd\+E}
+    \tshortcutII{Navigate back \slash forward}{\Cmd\+]}{\Cmd\+[}
+    \tshortcutI{Go to last edit}{\Cmd\+\Shift\+\Del}
+    \tshortcutI{Go to related symbol}{\Cmd\+\Ctrl\+\Up}
+    \tshortcutI{Go to declaration}{\Cmd\+B}
+    \tshortcutI{Go to definition}{\Cmd\+\Alt\+B}
+    \tshortcutII{go to previous \slash next function}{\Ctrl\+\Up}{\Ctrl\+\Down}
 
     \theader{Sublime text}
-    \tshortcut{Toggle spell check}{\Alt\+F6}
-    \tshortcut{Toggle side bar}{\Cmd\+K, \Cmd\+B}
-    \tshortcut{Paste from history}{\Cmd\+\Alt\+V}
-    % \tshortcut{Indent}{\Cmd\+]}
-    % \tshortcut{Unindent}{\Cmd\+[}
+    \tshortcutI{Toggle spell check}{\Alt\+F6}
+    \tshortcutI{Toggle side bar}{\Cmd\+K, \Cmd\+B}
+    \tshortcutI{Paste from history}{\Cmd\+\Alt\+V}
+    % \tshortcutI{Indent}{\Cmd\+]}
+    % \tshortcutI{Unindent}{\Cmd\+[}
     \tsubheader{Navigation}
-    % \tshortcut{Show command palette}{\Cmd\+\Shift\+P}
-    % \tshortcut{Goto files}{\Cmd\+P}
-    \tshortcut{Goto symbol}{\Cmd\+R}
-    \tshortcut{Goto line}{\Ctrl\+G}
-    \tshortcut{Goto definition}{\Cmd\+\Alt\+\Down}
-    \tshortcut{Goto symbol in project}{\Cmd\+\Shift\+R}
-    \tshortcutm{Jump back \slash forward}{\Ctrl\+-}{\Ctrl\+\Shift\+-}
+    % \tshortcutI{Show command palette}{\Cmd\+\Shift\+P}
+    % \tshortcutI{Goto files}{\Cmd\+P}
+    \tshortcutI{Goto symbol}{\Cmd\+R}
+    \tshortcutI{Goto line}{\Ctrl\+G}
+    \tshortcutI{Goto definition}{\Cmd\+\Alt\+\Down}
+    \tshortcutI{Goto symbol in project}{\Cmd\+\Shift\+R}
+    \tshortcutII{Jump back \slash forward}{\Ctrl\+-}{\Ctrl\+\Shift\+-}
     \tsubheader{Search}
-    % \tshortcut{Find}{\Cmd\+F}
-    \tshortcutm{Find next \slash previous}{\Cmd\+G}{\Cmd\+\Shift\+G}
-    \tshortcut{Replace}{\Cmd\+\Alt\+F}
-    \tshortcut{Replace next}{\Cmd\+\Alt\+E}
-    \tshortcut{Find in files}{\Cmd\+\Shift\+F}
+    % \tshortcutI{Find}{\Cmd\+F}
+    \tshortcutII{Find next \slash previous}{\Cmd\+G}{\Cmd\+\Shift\+G}
+    \tshortcutI{Replace}{\Cmd\+\Alt\+F}
+    \tshortcutI{Replace next}{\Cmd\+\Alt\+E}
+    \tshortcutI{Find in files}{\Cmd\+\Shift\+F}
 
     \theader{BetterTouchTool}
-    % \tshortcut{Open tmux tab here (finder)}{F5}
-    \tshortcut{Open Telegram}{F3}
-    \tshortcut{Open WhatsApp}{F4}
-    % \tshortcut{Open Safari}{F11}
-    \tshortcut{Open Preview}{\Cmd\+F3}
-    \tshortcut{Open Sourcetree}{\Cmd\+F4}
-    \tshortcut{Open MS Word}{\Cmd\+F10}
-    \tshortcut{Open CLion}{\Cmd\+F12}
+    % \tshortcutI{Open tmux tab here (finder)}{F5}
+    \tshortcutI{Open Telegram}{F3}
+    \tshortcutI{Open WhatsApp}{F4}
+    % \tshortcutI{Open Safari}{F11}
+    \tshortcutI{Open Preview}{\Cmd\+F3}
+    \tshortcutI{Open Sourcetree}{\Cmd\+F4}
+    \tshortcutI{Open MS Word}{\Cmd\+F10}
+    \tshortcutI{Open CLion}{\Cmd\+F12}
 
     \theader{Vim}
     \tsubheader{Navigation}
-    % \tshortcut{Move cursor}{hjkl}
-    \tshortcut{Back to indentation}{\textasciicircum}
-    \tshortcut{Cursor to bottom line}{L}
-    \tshortcut{Cursor to middle line}{M}
-    \tshortcut{Cursor to top line}{H}
-    \tshortcut{Next word start}{w}
-    \tshortcut{Next word start (no punctuation)}{W}
-    \tshortcut{End of word}{e}
-    \tshortcut{End of word (no punctuation)}{E}
-    \tshortcut{Jump back word}{b}
-    \tshortcut{Jump back word (no punctuation)}{B}
-    % \tshortcut{Start of line}{0}
-    \tshortcut{First non-blank character of line}{\textasciicircum}
-    % \tshortcut{End of line}{\$}
-    \tshortcut{Go to command (with number)}{G}
+    % \tshortcutI{Move cursor}{hjkl}
+    \tshortcutI{Back to indentation}{\textasciicircum}
+    \tshortcutI{Cursor to bottom line}{L}
+    \tshortcutI{Cursor to middle line}{M}
+    \tshortcutI{Cursor to top line}{H}
+    \tshortcutI{Next word start}{w}
+    \tshortcutI{Next word start (no punctuation)}{W}
+    \tshortcutI{End of word}{e}
+    \tshortcutI{End of word (no punctuation)}{E}
+    \tshortcutI{Jump back word}{b}
+    \tshortcutI{Jump back word (no punctuation)}{B}
+    % \tshortcutI{Start of line}{0}
+    \tshortcutI{First non-blank character of line}{\textasciicircum}
+    % \tshortcutI{End of line}{\$}
+    \tshortcutI{Go to command (with number)}{G}
     \tsubheader{Actions}
-    % \tshortcut{Insert at cursor}{i}
-    % \tshortcut{Insert after cursor}{a}
-    \tshortcut{Insert at beginning of line}{I}
-    \tshortcut{Insert at end of line}{A}
-    \tshortcut{Insert blank line after current line}{o}
-    \tshortcut{Insert blank line before current line}{O}
-    % \tshortcut{Delete entire line}{dd}
-    \tshortcut{Delete to end of line}{D}
-    \tshortcut{Search again}{n}
-    % \tshortcut{Search forward}{/}
+    % \tshortcutI{Insert at cursor}{i}
+    % \tshortcutI{Insert after cursor}{a}
+    \tshortcutI{Insert at beginning of line}{I}
+    \tshortcutI{Insert at end of line}{A}
+    \tshortcutI{Insert blank line after current line}{o}
+    \tshortcutI{Insert blank line before current line}{O}
+    % \tshortcutI{Delete entire line}{dd}
+    \tshortcutI{Delete to end of line}{D}
+    \tshortcutI{Search again}{n}
+    % \tshortcutI{Search forward}{/}
 
     \theader{Tmux}
-    \tshortcut{\Prf}{\Ctrl\+B}
+    \tshortcutI{\Prf}{\Ctrl\+B}
     \tsubheader{Windows}
-    \tshortcut{Next window}{\Prf\+N}
-    \tshortcut{Previous window}{\Prf\+P}
-    \tshortcut{Find window}{\Prf\+F}
-    \tshortcut{Name window}{\Prf\+,}
-    \tshortcut{Kill window}{\Prf\+\&}
+    \tshortcutI{Next window}{\Prf\+N}
+    \tshortcutI{Previous window}{\Prf\+P}
+    \tshortcutI{Find window}{\Prf\+F}
+    \tshortcutI{Name window}{\Prf\+,}
+    \tshortcutI{Kill window}{\Prf\+\&}
     % \tsubheader{Panes}
-    % \tshortcut{Swap panes}{\Prf\+O}
-    % \tshortcut{Show pane numbers}{\Prf\+Q}
-    % \tshortcut{Kill pane}{\Prf\+X}
+    % \tshortcutI{Swap panes}{\Prf\+O}
+    % \tshortcutI{Show pane numbers}{\Prf\+Q}
+    % \tshortcutI{Kill pane}{\Prf\+X}
     \tsubheader{Copy Mode}
-    % \tshortcut{Start Copy mode}{\Prf\+[}
-    \tshortcut{Start selection}{\Space}
-    \tshortcut{Clear selection}{\Esc}
-    \tshortcut{Copy selection}{\Enter}
-    \tshortcut{Paste buffer}{\Prf\+]}
-    \tshortcut{Cursor to bottom line}{L}
-    \tshortcut{Cursor to middle line}{M}
-    \tshortcut{Cursor to top line}{H}
-    \tshortcut{Goto line}{:}
-    % \tshortcut{Quit mode}{q}
-    \tshortcut{Search again}{n}
-    \tshortcut{Search backward}{?}
-    \tshortcut{Search forward}{/}
+    % \tshortcutI{Start Copy mode}{\Prf\+[}
+    \tshortcutI{Start selection}{\Space}
+    \tshortcutI{Clear selection}{\Esc}
+    \tshortcutI{Copy selection}{\Enter}
+    \tshortcutI{Paste buffer}{\Prf\+]}
+    \tshortcutI{Cursor to bottom line}{L}
+    \tshortcutI{Cursor to middle line}{M}
+    \tshortcutI{Cursor to top line}{H}
+    \tshortcutI{Goto line}{:}
+    % \tshortcutI{Quit mode}{q}
+    \tshortcutI{Search again}{n}
+    \tshortcutI{Search backward}{?}
+    \tshortcutI{Search forward}{/}
 \end{supertabular}
 
 \end{multicols}

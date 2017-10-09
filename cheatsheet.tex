@@ -1,5 +1,6 @@
 \documentclass[10pt,a4paper,landscape,draft,sans]{scrartcl}
 
+% font setup
 \usepackage{xltxtra}
 \setsansfont{Brandon Grotesque Regular.ttf}[
     BoldFont = Brandon Grotesque Bold.ttf]
@@ -11,12 +12,17 @@
 \setlength{\columnsep}{0.1cm}
 \setlength{\columnseprule}{0pt}
 
+% hyperlink setup
+\usepackage{hyperref}
+
 % header/footer
 \usepackage[draft=false]{scrlayer-scrpage}
 \pagestyle{scrheadings}
 \ofoot{}
 \cfoot{}
-\ifoot{}
+\ifoot{
+    Jonathan Müller \hspace{2pt} | \hspace{2pt} \href{mailto:jo@student.ethz.ch}{jo@student.ethz.ch} \hspace{2pt} | \hspace{2pt} \href{https://jo-m.ch/}{jo-m.ch}
+}
 
 % multicolumn table setup
 \usepackage{supertabular}
@@ -34,6 +40,7 @@
 }
 \makeatother
 
+% slash with spaces
 \renewcommand{\slash}{\hspace{1pt}/\hspace{2pt}}
 
 % macros for symbols and headers

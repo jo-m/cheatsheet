@@ -60,13 +60,13 @@
 \usepackage{fontspec}
 \newfontfamily\segoe{seguisym.ttf}
 \newfontfamily\lucida{Lucida-Grande.otf}
-\newcommand\Cmd{{\segoe \large ⌘}}
-\newcommand\Ctrl{{\lucida \textasciicircum}}
-\newcommand\Alt{{\segoe \large ⌥}}
-\newcommand\Shift{{\lucida ⇧}}
+\newcommand\Cmd{\raisebox{-1pt}{\segoe \large ⌘}}
+\newcommand\Ctrl{\raisebox{-2pt}{\large \textasciicircum}}
+\newcommand\Alt{\raisebox{-1pt}{\segoe \large ⌥}}
+\newcommand\Shift{\raisebox{-1pt}{\lucida ⇧}}
 \newcommand\Del{{\lucida ⌫}}
 \newcommand\Enter{{\segoe ↩︎}}
-\newcommand\Tab{{\lucida \Large ⇥︎}}
+\newcommand\Tab{\raisebox{-2pt}{\lucida \Large ⇥︎}}
 \newcommand\Up{{\segoe ↑}}
 \newcommand\Down{{\segoe ↓}}
 \newcommand\Left{{\segoe ←}}

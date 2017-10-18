@@ -1,6 +1,13 @@
 before_install:
 - sudo apt-get update
-- sudo apt-get install texlive-latex-extra
-
+- sudo apt-get install texlive-latex-extra texlive-xetex
 script:
 - make all
+deploy:
+  provider: releases
+  api_key:
+    secure: EjRtcEnVP+6aHjIf6ZNVYYH4QVTJ/riOw9qZ+JfBLkQxdEhAfo4ySpoV7JcyK3s1gR044uwtlOL9PNgt2g5c7I6RBUly5g5fe0DWCyQEWGP6/ER5wyi/cBpl0sUONPRIHGrd9Wv6ZEkCDczQlq4BwgKjynBhpjbKpJu2ho5SKHdvahSeb5DMblUXip7xh5xXhSYBtj33zLEaMg7/3YT4mOqebCSY10IIK4AR5/yGve6WiJP5Wu3luxJ4jFTREzPYOBY/DG6x42CmB8W6oP7ctjT7qZ3mQg5VhAcbetSgPtHBtQu66XREXvUKTDkxsnxf0zEAc9p3OHVJi4vK/WKFLSinmMYK2OscDtvQDeFpn3M5VEH9cTcmCfVoG8B1CZj0vgb4R20OOIgaOwdP//E7kyc/to60cc/AamcxZkN6aM5Ux+gFFOq0z/AHua2fH6DB7iYPyDQleGebk6IursZJ+Yl9X+zIYqr8eKrs8sPUyByb0o9FxDIB2aitqdFMrUdM842ZOe50h/qlHUSjbkjGIbooj3kG3O+qiLIa4ecfWjnLqpemvr95mDVcLJZtJbjgposleiNZExYhcY0REfo06DJ1sLoB3ugiDZ3SOF1R+vXZHz+qfcWgj9XLc8H9bBvoDPQpPxqelMmQgKmkpaB5XaTNtJaukFv0hLn5XgNuzEs=
+  file: cheatsheet.pdf
+  on:
+    repo: jo-m/cheatsheet
+  skip_cleanup: true

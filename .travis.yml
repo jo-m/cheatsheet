@@ -3,8 +3,6 @@ sudo: required
 services:
   - docker
 
-language: php
-
 before_install:
   - docker pull ubuntu:16.04
 

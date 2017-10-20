@@ -1,11 +1,16 @@
-dist: xenial
-sudo: require
+sudo: required
+
+services:
+  - docker
+
+language: php
+
 before_install:
-- sudo apt-get -qq update
-- sudo apt-get install -y --no-install-recommends texlive-full texlive-xetex
+  - docker pull ubuntu:16.04
+
 script:
-- mkdir _build
-- xelatex -interaction=nonstopmode -halt-on-error -output-directory _build cheatsheet
+- docker build .
+
 deploy:
   provider: releases
   api_key:

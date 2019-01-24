@@ -1,0 +1,69 @@
+
+% multicolumn table setup
+\usepackage{supertabular}
+\makeatletter
+\let\mcnewpage=\newpage
+\newcommand{\TrickSupertabularIntoMulticols}{
+  \renewcommand\newpage{
+    \if@firstcolumn
+      \hrule width\linewidth height0pt
+      \columnbreak
+    \else
+      \mcnewpage
+    \fi
+  }
+}
+\makeatother
+
+% slash with spaces
+\renewcommand{\slash}{\hspace{1pt}/\hspace{2pt}}
+
+% macros for symbols and headers
+\newcommand{\theader}[1]{
+    \vspace{15pt}
+    \textbf{\uppercase{#1}} & \\
+    \noalign{\global\arrayrulewidth=1.5pt}
+    \hline
+}
+\newcommand{\theaderfirst}[1]{
+    \textbf{\uppercase{#1}} & \\
+    \noalign{\global\arrayrulewidth=1.5pt}
+    \hline
+}
+\newcommand{\tsubheader}[1]{
+    \vspace{2pt}
+    \textbf{#1} & \\
+    \noalign{\global\arrayrulewidth=0.5pt}
+    \hline
+}
+\newcommand{\tshortcutI}[2]{
+    #1 & \textbf{#2} \\
+    \noalign{\global\arrayrulewidth=0.5pt}
+    \hline
+}
+\newcommand{\tshortcutII}[3]{
+    #1 & \textbf{#2} / \textbf{#3} \\
+    \noalign{\global\arrayrulewidth=0.5pt}
+    \hline
+}
+
+% modifier key symbols
+\usepackage{fontspec}
+\newfontfamily\segoe{seguisym.ttf}
+\newfontfamily\lucida{Lucida-Grande.otf}
+\newcommand\Cmd{\raisebox{-1pt}{\segoe \large ⌘}}
+\newcommand\Ctrl{\raisebox{-3pt}{\large \textasciicircum}}
+\newcommand\Alt{\raisebox{-1pt}{\segoe \large ⌥}}
+\newcommand\Shift{\raisebox{-1pt}{\lucida ⇧}}
+\newcommand\Del{{\lucida ⌫}}
+\newcommand\Enter{{\segoe ↩︎}}
+\newcommand\Tab{\raisebox{-2pt}{\lucida \large ⇥︎}}
+\newcommand\Up{{\segoe ↑}}
+\newcommand\Down{{\segoe ↓}}
+\newcommand\Left{{\segoe ←}}
+\newcommand\Right{{\segoe →}}
+\newcommand\Fn{Fn}
+\newcommand\Prf{Prefix\hspace{1pt}+\hspace{1pt}}
+\newcommand\Esc{Esc}
+\newcommand\Space{Space}
+\newcommand\+{}

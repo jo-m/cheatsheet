@@ -1,9 +1,13 @@
 .PHONY: clean all
 
-all: cheatsheet.pdf
+all: cheatsheet_mac.pdf cheatsheet_linux.pdf
 
-cheatsheet.pdf: cheatsheet.tex
-	xelatex cheatsheet
+cheatsheet_mac.pdf: cheatsheet_mac.tex macros.tex
+	xelatex cheatsheet_mac
+
+cheatsheet_linux.pdf: cheatsheet_linux.tex macros.tex
+	xelatex cheatsheet_linux
 
 clean:
-	-rm cheatsheet.aux cheatsheet.log cheatsheet.pdf
+	-rm cheatsheet_mac.aux cheatsheet_mac.log cheatsheet_mac.pdf
+	-rm cheatsheet_linux.aux cheatsheet_linux.log cheatsheet_linux.pdf

@@ -9,4 +9,5 @@ ADD . /src
 WORKDIR /src
 RUN mkdir _build
 RUN xelatex --version
-RUN xelatex -interaction=nonstopmode -halt-on-error -output-directory _build cheatsheet
+RUN xelatex -interaction=nonstopmode -halt-on-error -output-directory _build cheatsheet_linux
+RUN xelatex -interaction=nonstopmode -halt-on-error -output-directory _build cheatsheet_mac
